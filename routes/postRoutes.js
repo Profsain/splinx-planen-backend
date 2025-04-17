@@ -7,16 +7,22 @@ const postController = require('../controllers/postController');
 // Routes
 // create new post
 router.post('/', postController.createPost);
+
 // like a post
 router.put('/:postId/like', postController.likePost);
+
 // get all post likes
 router.get('/:postId/likes', postController.getPostLikes);
+
 // get all post by community id
 router.get('/:id', postController.getPostById);
+
 // delete a post
 router.delete('/:id', postController.deletePost);
+
 // create a new comment
 router.post('/:id/comment', postController.createComment);
+
 // get all comments
 router.get('/:id/comments', postController.getComments);
 // delete a comment
